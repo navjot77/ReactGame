@@ -5,7 +5,13 @@
 
 var React=require("react");
 var ReactDOM=require("react-dom");
+var Routes=require("./config/Routes");
 
+
+
+
+
+ReactDOM.render(Routes,document.getElementById("myApp"));
 
 
 
@@ -26,14 +32,35 @@ var ProfilePic = React.createClass({
 var ProfileLink = React.createClass({
     render: function () {
         return (
-            <div>
-                <a href={'https://www.github.com/' +  this.props.username}>
+
+                <Link href={'https://www.github.com/' +  this.props.username}>
                     {this.props.username}
-                </a>
-            </div>
+                </Link>
+
         );
     }
 });
+
+var Link= React.createClass({
+
+    goToUrl:function(){
+
+        window.location.replace(this.props.href);
+    },
+
+    render: function () {
+        return(
+            <span style={{color:'blue', cursor:'pointer'}} onClick={this.goToUrl}>
+                {this.props.children}
+            </span>
+        );
+
+
+    }
+
+
+});
+
 
 var ProfileName = React.createClass({
     render: function (){
@@ -54,4 +81,5 @@ var Avatar = React.createClass({
 });
 
 
-ReactDOM.render(<Avatar user={USER_DATA} />, document.getElementById('myApp'));
+//ReactDOM.render(<Avatar user={USER_DATA} />, document.getElementById('myApp'));
+ReactDOM.render(Routes,document.getElementById("myApp"));
