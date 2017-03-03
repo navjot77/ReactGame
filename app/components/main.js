@@ -6,7 +6,7 @@ var React=require('react');
 var Main=React.createClass({
     render:function () {
        return(
-        <div>Hello MAIN
+        <div>
             {this.props.children}
         </div>
        )
