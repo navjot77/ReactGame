@@ -12,6 +12,7 @@ var HashHistory=ReactRouter.hashHistory;
 var Main=require('../components/Main');
 var Home=require('../components/Home');
 var promptContainer=require('../containers/promptContainer');
+var battleContainer=require('../containers/battleContainer');
 
 var Routes=(
 
@@ -20,6 +21,7 @@ var Routes=(
         <IndexRoute component={Home}/>
         <Route path="playerOne" header="Player 1" component={promptContainer}/>
         <Route path="playerTwo/:playerOne" header="Player 2" component={promptContainer}/>
+        <Route path='/battle' component={battleContainer}/>
     </Route>
 </Router>
 

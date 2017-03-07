@@ -3,7 +3,7 @@
  */
 
 var React=require('react');
-var propTypes=React.prototype;
+var PropTypes=React.PropTypes;
 
 var promptContainer= React.createClass({
 
@@ -32,7 +32,7 @@ var promptContainer= React.createClass({
         if (this.props.routeParams.playerOne){
 
 
-            this.router.push({
+            this.context.router.push({
                 pathname:'/battle',
                 query:{
                     playerOne:this.props.routeParams.playerOne,
