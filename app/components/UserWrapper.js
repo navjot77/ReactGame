@@ -4,12 +4,12 @@
 var React=require('react');
 var PropTypes=React.PropTypes;
 
-function UserWrapper(user){
+function UserWrapper(props){
     return(
 
         <div className='col-sm-6'>
-            <p className='lead'>{user.header}</p>
-            {user.children}
+            <p className='lead'>{props.header}</p>
+            {props.children}
         </div>
     )
 
@@ -17,8 +17,7 @@ function UserWrapper(user){
 
 UserWrapper.propType={
 
-
-    headers: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired
 }
 
 module.exports=UserWrapper;

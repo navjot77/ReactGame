@@ -31,7 +31,7 @@ var promptContainer= React.createClass({
 
         if (this.props.routeParams.playerOne){
 
-
+            console.log(user);
             this.context.router.push({
                 pathname:'/battle',
                 query:{
@@ -44,6 +44,7 @@ var promptContainer= React.createClass({
         }
         else{
             console.log("First move"+user);
+            console.log(user);
 
             this.context.router.push('/playerTwo/' + user)
 

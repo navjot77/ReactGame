@@ -27,7 +27,7 @@ var battleContainer= React.createClass({
 
         GithubHelper.getData([data.playerOne, data.playerTwo])
             .then(function (info) {
-
+                console.log("---",info);
                 this.setState({
                 loading:true,
                     userInfo:[info[0],info[1]]
@@ -41,11 +41,23 @@ var battleContainer= React.createClass({
 
     },
 
+    handleInitiate: function () {
+    console.log("Indide handler initiate ");
+    this.context.router.push({
+        pathname: '/result',
+        state:{
+            userInfo: this.state.userInfo,
+        }
+
+        })
+
+    },
+
    render:function () {
     return(
         <ConfirmBattle
     loading = {this.state.loading}
-
+    onInitiateBattle={this.handleInitiate}
     playersInfo={this.state.userInfo}
     /> )
 

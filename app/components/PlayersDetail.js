@@ -7,7 +7,7 @@ var PropTypes = React.PropTypes;
 
 
 function UserDetails (user) {
-    console.log(user.user.name)
+
     return (
         <div>
             {!!user.user.score && <li className="list-group-item"><h3>Score: {user.user.score}</h3></li>}

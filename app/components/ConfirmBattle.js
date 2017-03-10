@@ -17,16 +17,16 @@ return props.loading === false ?
     <div className="jumbotron col-sm-12 text-center" >
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>
-            <UserWrapper>
+            <UserWrapper header="Player 1" >
                 <PlayersDetail user={ props.playersInfo[0] } />
             </UserWrapper>
-            <UserWrapper>
-                <PlayersDetail user={ props.playersInfo[0] } />
+            <UserWrapper  header="Player 2">
+                <PlayersDetail user={ props.playersInfo[1] } />
             </UserWrapper>
         </div>
         <div className='col-sm-8 col-sm-offset-2'>
             <div className='col-sm-12' >
-                <button type='button' className='btn btn-lg btn-success' >Initiate Battle!</button>
+                <button type='button' className='btn btn-lg btn-success' onClick={props.onInitiateBattle}>Initiate Battle!</button>
             </div>
             <div className='col-sm-12' >
                 <Link to='/playerOne'>
