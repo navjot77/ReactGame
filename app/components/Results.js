@@ -2,15 +2,18 @@
  * Created by navjotsingh on 3/6/17.
  */
 
-var React=require('react');
-var PropTypes=React.PropTypes;
+import React,{PropTypes} from 'react';
+import {Link} from 'react-router';
 
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link
-var UserDetails = require('./PlayersDetail');
-var UserDetailsWrapper = require('./UserWrapper');
-var MainContainer = require('./MainContainer');
-var Loading=require('./Loading');
+
+
+import UserDetails from '../components/PlayersDetail';
+import UserDetailsWrapper from '../components/UserWrapper';
+import MainContainer from '../components/MainContainer';
+
+import Loading from './Loading';
+
+
 
 
 function StartOver () {
@@ -31,7 +34,7 @@ function Tie (props) {
         </MainContainer>
     )
 }
-function Results (props) {
+export default function Results (props) {
     if (props.isLoading === true) {
         return <Loading />
     }
@@ -61,4 +64,4 @@ Results.propTypes = {
     playersInfo: PropTypes.array.isRequired,
     scores: PropTypes.array.isRequired
 }
-module.exports = Results;
+

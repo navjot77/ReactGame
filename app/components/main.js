@@ -1,12 +1,12 @@
 /**
  * Created by navjotsingh on 3/2/17.
  */
+import React,{PropTypes} from 'react';
 
-var React=require('react');
-var ReactCSSTransitionGroup=require('react-addons-css-transition-group');
-require('../main.css');
+const ReactCSSTransitionGroup=require('react-addons-css-transition-group');
+import '../main.css';
 
-var Main=React.createClass({
+const Main=React.createClass({
     render:function () {
        return(
         <div>
@@ -29,4 +29,4 @@ var Main=React.createClass({
 
 });
 
-module.exports = Main;
+export default Main;

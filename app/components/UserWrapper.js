@@ -1,10 +1,10 @@
 /**
  * Created by navjotsingh on 3/6/17.
  */
-var React=require('react');
-var PropTypes=React.PropTypes;
+import React,{PropTypes} from 'react';
 
-function UserWrapper(props){
+
+export default function UserWrapper(props){
     return(
 
         <div className='col-sm-6'>
@@ -20,4 +20,3 @@ UserWrapper.propType={
     header: PropTypes.string.isRequired
 }
 
-module.exports=UserWrapper;

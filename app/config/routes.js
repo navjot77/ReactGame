@@ -2,22 +2,27 @@
  * Created by navjotsingh on 3/2/17.
  */
 
-var React = require('react');
-var ReactDOM=require('react-dom');
-var ReactRouter=require('react-router');
-var Router=ReactRouter.Router;
-var Route=ReactRouter.Route;
-var IndexRoute=ReactRouter.IndexRoute;
-var HashHistory=ReactRouter.hashHistory;
-var Main=require('../components/Main');
-var Home=require('../components/Home');
-var promptContainer=require('../containers/promptContainer');
-var battleContainer=require('../containers/battleContainer');
-var resultContainer=require('../containers/resultContainer');
 
-var Routes=(
+import React from 'react'
 
-<Router history={HashHistory}>
+
+
+import  ReactDOM from 'react-dom';
+
+import ReactRouter,{Router, Route, IndexRoute, hashHistory} from 'react-router';
+
+
+import Main from '../components/main';
+import Home from '../components/Home';
+
+
+import promptContainer from '../containers/promptContainer';
+import battleContainer from '../containers/battleContainer';
+import resultContainer from '../containers/resultContainer';
+
+const Routes=(
+
+<Router history={hashHistory}>
     <Route path="/" component={Main}>
         <IndexRoute component={Home}/>
         <Route path="playerOne" header="Player 1" component={promptContainer}/>
@@ -31,6 +36,6 @@ var Routes=(
 
 );
 
-module.exports =Routes;
+export default Routes;
 
 

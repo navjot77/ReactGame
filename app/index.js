@@ -2,10 +2,10 @@
  * Created by navjotsingh on 3/2/17.
  */
 
+import React from 'react';
 
-var React=require("react");
-var ReactDOM=require("react-dom");
-var Routes=require("./config/Routes");
+import ReactDOM from "react-dom";
+import Routes from "./config/Routes";
 
 
 

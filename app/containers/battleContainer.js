@@ -1,14 +1,14 @@
 /**
  * Created by navjotsingh on 3/3/17.
  */
-var React = require('react');
-var PropTypes=React.PropTypes;
+import React,{PropTypes} from 'react';
+
 var GithubHelper=require('../utils/githubHelper');
 
-var ConfirmBattle=require('../components/ConfirmBattle');
+import ConfirmBattle from '../components/ConfirmBattle';
 
 
-var battleContainer= React.createClass({
+const battleContainer= React.createClass({
     contextTypes:{
 
         router: React.PropTypes.object.isRequired
@@ -65,4 +65,4 @@ var battleContainer= React.createClass({
 
 });
 
-module.exports=battleContainer;
+export default battleContainer;

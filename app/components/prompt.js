@@ -3,8 +3,8 @@
  */
 
 
-var React= require('react');
-var ProtoTypes=React.prototype;
+import React,{PropTypes} from 'react';
+
 
 function Prompt(props){
 

@@ -2,10 +2,10 @@
  * Created by navjotsingh on 3/9/17.
  */
 
-var React=require('react');
-var PropTypes=React.PropTypes;
+import React,{PropTypes} from 'react';
 
-var Loading= React.createClass({
+
+const Loading= React.createClass({
     propType:{
         text: PropTypes.string,
         speed:PropTypes.number
@@ -52,4 +52,4 @@ var Loading= React.createClass({
 
 });
 
-module.exports=Loading;
+export default Loading;

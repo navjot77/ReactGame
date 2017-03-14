@@ -2,10 +2,9 @@
  * Created by navjotsingh on 3/3/17.
  */
 
-var React=require('react');
-var PropTypes=React.PropTypes;
+import React,{PropTypes} from 'react';
 
-var promptContainer= React.createClass({
+const promptContainer= React.createClass({
 
     contextTypes: {
         router: React.PropTypes.object.isRequired
@@ -90,4 +89,4 @@ var promptContainer= React.createClass({
 
 });
 
-module.exports=promptContainer;
+export default promptContainer;

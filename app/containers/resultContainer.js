@@ -3,12 +3,14 @@
  */
 
 
-var React = require('react');
-var GithubHelper = require('../utils/githubHelper');
-var Results=require('../components/Results');
-var axios=require('axios');
+import React,{PropTypes} from 'react';
 
-var resultContainer= React.createClass({
+var GithubHelper = require('../utils/githubHelper');
+
+
+import Results from '../components/Results';
+
+const ResultContainer= React.createClass({
 
     contextTypes:{
         router:React.PropTypes.object.isRequired
@@ -61,4 +63,4 @@ var resultContainer= React.createClass({
 });
 
 
-module.exports=resultContainer;
+export default ResultContainer;

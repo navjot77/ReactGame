@@ -1,17 +1,11 @@
 /**
  * Created by navjotsingh on 3/2/17.
  */
-var React = require('react');
-var reactRouter=require('react-router');
-var Link=reactRouter.Link;
+import React,{PropTypes} from 'react';
+import {Link} from 'react-router';
 
-function Home () {
+export default function Home () {
         return (
-
-
-
-
-
 
         <div className="jumbotron col-sm-12 text-center" style={{background:'black', color:'white', height:1000}}>
             <h1>BattleGround</h1>
@@ -27,4 +21,4 @@ function Home () {
     }
 
 
-module.exports = Home;
+

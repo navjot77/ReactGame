@@ -1,10 +1,11 @@
 /**
  * Created by navjotsingh on 3/9/17.
  */
-var React = require('react');
+import React,{PropTypes} from 'react';
 
 
-function MainContainer (props) {
+
+export default function MainContainer (props) {
     return (
         <div className="jumbotron col-sm-12 text-center" >
             {props.children}
@@ -12,4 +13,3 @@ function MainContainer (props) {
     )
 }
 
-module.exports = MainContainer;

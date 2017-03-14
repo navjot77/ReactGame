@@ -1,16 +1,14 @@
 /**
  * Created by navjotsingh on 3/6/17.
  */
+import React,{PropTypes} from 'react';
+import {Link} from 'react-router';
 
-var React=require('react');
-var ReactRouter=require('react-router');
-var PropTypes=React.PropTypes;
-var Link = ReactRouter.Link;
-var PlayersDetail=require('../components/PlayersDetail');
-var UserWrapper=require("../components/UserWrapper");
+import PlayersDetail from '../components/PlayersDetail';
+import UserWrapper from '../components/UserWrapper';
 
 
-function ConfirmBattle(props) {
+export default function ConfirmBattle(props) {
     console.log(props.playersInfo);
 return props.loading === false ?
     <p>loading...</p> :
@@ -35,7 +33,5 @@ return props.loading === false ?
             </div>
         </div>
     </div>
-
 }
 
-module.exports=ConfirmBattle;
